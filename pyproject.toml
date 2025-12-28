@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snapclip"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+  "pywin32>=306",
+  "mss>=9.0.1",
+  "Pillow>=10.0.0",
+  "pystray>=0.19.5"
+]
+
+[project.scripts]
+snapclip = "snapclip.app:main"
+
+[tool.setuptools]
+package-dir = {""="src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
